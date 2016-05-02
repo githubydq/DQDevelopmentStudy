@@ -35,7 +35,7 @@
 #pragma mark load data
 -(void)loadData{
     self.itemsTitle = @[@"学习",@"工具",@"我的"];
-    self.itemsImage = @[@"",@"",@""];
+    self.itemsImage = @[@"study30x30",@"",@"mine30x30"];
     self.itemsVC = @[@"DQStudyViewController",@"DQToolViewController",@"DQMineViewController"];
 }
 
@@ -52,7 +52,7 @@
     
     for (int j = 0 ; j < self.viewControllers.count; j++) {
         UIViewController * vc = VCs[j];
-        vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:self.itemsTitle[j] image:nil selectedImage:nil];
+        vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:self.itemsTitle[j] image:[UIImage imageNamed:self.itemsImage[j]] selectedImage:nil];
         [vc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]} forState:UIControlStateNormal];
         
     }

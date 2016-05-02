@@ -1,19 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DQStudyViewController">
             <connections>
+                <outlet property="table" destination="KbE-rR-v5T" id="GS4-Bl-IOb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KbE-rR-v5T">
+                    <rect key="frame" x="0.0" y="64" width="375" height="492"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="W1t-Qn-Yzf"/>
+                        <outlet property="delegate" destination="-1" id="f16-hc-CCk"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0em-6C-T09">
+                    <rect key="frame" x="305" y="486" width="50" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.7545524150992442" blue="0.4890303187032311" alpha="0.69874778368794321" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="0em-6C-T09" secondAttribute="height" multiplier="1:1" id="BjB-jd-V8g"/>
+                        <constraint firstAttribute="width" constant="50" id="vBf-3n-EA4"/>
+                    </constraints>
+                    <state key="normal" title="置顶">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="top:" destination="-1" eventType="touchUpInside" id="has-iF-8Df"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="KbE-rR-v5T" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2j6-oH-Tc6"/>
+                <constraint firstAttribute="trailing" secondItem="KbE-rR-v5T" secondAttribute="trailing" id="CkH-M9-5Bf"/>
+                <constraint firstAttribute="trailing" secondItem="0em-6C-T09" secondAttribute="trailing" constant="20" id="G8h-hN-u2J"/>
+                <constraint firstAttribute="bottom" secondItem="KbE-rR-v5T" secondAttribute="bottom" constant="44" id="bEX-om-Buy"/>
+                <constraint firstItem="KbE-rR-v5T" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="eMC-Pd-ebV"/>
+                <constraint firstAttribute="bottom" secondItem="0em-6C-T09" secondAttribute="bottom" constant="64" id="wdx-UV-mKq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="263.5" y="320"/>
         </view>
     </objects>
 </document>

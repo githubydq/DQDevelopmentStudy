@@ -29,6 +29,7 @@
     self.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationBar.barTintColor = [UIColor blackColor];
     self.navigationBar.translucent = YES;
+    
 }
 
 #pragma mark -

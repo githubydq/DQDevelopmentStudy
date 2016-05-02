@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		375B866F73CE6E6D2DB96AFE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A551913D65EB94424BE3FCB1 /* libPods.a */; };
+		B369E2D81CD75E6500B41355 /* DQRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B369E2D61CD75E6500B41355 /* DQRecordViewController.m */; };
+		B369E2D91CD75E6500B41355 /* DQRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B369E2D71CD75E6500B41355 /* DQRecordViewController.xib */; };
+		B369E2E21CD76C5A00B41355 /* DQSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = B369E2E11CD76C5A00B41355 /* DQSelectView.m */; };
+		B369E2E41CD76C6700B41355 /* DQSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B369E2E31CD76C6700B41355 /* DQSelectView.xib */; };
+		B369E2E71CD76E6500B41355 /* NSArray+DQHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B369E2E61CD76E6500B41355 /* NSArray+DQHelper.m */; };
 		B369F3CE1CD6AD7C006997E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B369F3CD1CD6AD7C006997E4 /* main.m */; };
 		B369F3D11CD6AD7C006997E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B369F3D01CD6AD7C006997E4 /* AppDelegate.m */; };
 		B369F3D71CD6AD7C006997E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B369F3D51CD6AD7C006997E4 /* Main.storyboard */; };
@@ -31,6 +36,14 @@
 		371798B9E96C58D83B0A38AB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5C19BD3ABDF6AF3534B88C1E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A551913D65EB94424BE3FCB1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B369E2D51CD75E6500B41355 /* DQRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQRecordViewController.h; sourceTree = "<group>"; };
+		B369E2D61CD75E6500B41355 /* DQRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQRecordViewController.m; sourceTree = "<group>"; };
+		B369E2D71CD75E6500B41355 /* DQRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQRecordViewController.xib; sourceTree = "<group>"; };
+		B369E2E01CD76C5A00B41355 /* DQSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQSelectView.h; sourceTree = "<group>"; };
+		B369E2E11CD76C5A00B41355 /* DQSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQSelectView.m; sourceTree = "<group>"; };
+		B369E2E31CD76C6700B41355 /* DQSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQSelectView.xib; sourceTree = "<group>"; };
+		B369E2E51CD76E6500B41355 /* NSArray+DQHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DQHelper.h"; sourceTree = "<group>"; };
+		B369E2E61CD76E6500B41355 /* NSArray+DQHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DQHelper.m"; sourceTree = "<group>"; };
 		B369F3C91CD6AD7C006997E4 /* DQStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DQStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B369F3CD1CD6AD7C006997E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B369F3CF1CD6AD7C006997E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +91,16 @@
 				A551913D65EB94424BE3FCB1 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B369E2DF1CD76C4100B41355 /* selectView */ = {
+			isa = PBXGroup;
+			children = (
+				B369E2E01CD76C5A00B41355 /* DQSelectView.h */,
+				B369E2E11CD76C5A00B41355 /* DQSelectView.m */,
+				B369E2E31CD76C6700B41355 /* DQSelectView.xib */,
+			);
+			path = selectView;
 			sourceTree = "<group>";
 		};
 		B369F3C01CD6AD7C006997E4 = {
@@ -139,6 +162,8 @@
 		B369F3E41CD6AD7C006997E4 /* Cagetory */ = {
 			isa = PBXGroup;
 			children = (
+				B369E2E51CD76E6500B41355 /* NSArray+DQHelper.h */,
+				B369E2E61CD76E6500B41355 /* NSArray+DQHelper.m */,
 			);
 			path = Cagetory;
 			sourceTree = "<group>";
@@ -179,6 +204,7 @@
 		B369F3E91CD6AD7C006997E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B369E2DF1CD76C4100B41355 /* selectView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +238,9 @@
 				B369F4021CD6AD7C006997E4 /* DQStudyViewController.h */,
 				B369F4031CD6AD7C006997E4 /* DQStudyViewController.m */,
 				B369F4041CD6AD7C006997E4 /* DQStudyViewController.xib */,
+				B369E2D51CD75E6500B41355 /* DQRecordViewController.h */,
+				B369E2D61CD75E6500B41355 /* DQRecordViewController.m */,
+				B369E2D71CD75E6500B41355 /* DQRecordViewController.xib */,
 			);
 			path = Study;
 			sourceTree = "<group>";
@@ -316,12 +345,14 @@
 			files = (
 				B369F3F31CD6AD7C006997E4 /* DQWelcomeViewController.xib in Resources */,
 				B369F4101CD6AD7C006997E4 /* DQMineViewController.xib in Resources */,
+				B369E2D91CD75E6500B41355 /* DQRecordViewController.xib in Resources */,
 				B369F3DC1CD6AD7C006997E4 /* LaunchScreen.storyboard in Resources */,
 				B369F4001CD6AD7C006997E4 /* DQMainViewController.xib in Resources */,
 				B369F40B1CD6AD7C006997E4 /* DQToolViewController.xib in Resources */,
 				B369F3F61CD6AD7C006997E4 /* Image.bundle in Resources */,
 				B369F4061CD6AD7C006997E4 /* DQStudyViewController.xib in Resources */,
 				B369F3D91CD6AD7C006997E4 /* Assets.xcassets in Resources */,
+				B369E2E41CD76C6700B41355 /* DQSelectView.xib in Resources */,
 				B369F3D71CD6AD7C006997E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,9 +415,12 @@
 				B369F4131CD6AD7C006997E4 /* DQBaseViewController.m in Sources */,
 				B369F3F21CD6AD7C006997E4 /* DQWelcomeViewController.m in Sources */,
 				B369F3D11CD6AD7C006997E4 /* AppDelegate.m in Sources */,
+				B369E2E21CD76C5A00B41355 /* DQSelectView.m in Sources */,
 				B369F40F1CD6AD7C006997E4 /* DQMineViewController.m in Sources */,
+				B369E2D81CD75E6500B41355 /* DQRecordViewController.m in Sources */,
 				B369F3FF1CD6AD7C006997E4 /* DQMainViewController.m in Sources */,
 				B369F4051CD6AD7C006997E4 /* DQStudyViewController.m in Sources */,
+				B369E2E71CD76E6500B41355 /* NSArray+DQHelper.m in Sources */,
 				B369F3CE1CD6AD7C006997E4 /* main.m in Sources */,
 				B369F40A1CD6AD7C006997E4 /* DQToolViewController.m in Sources */,
 			);
