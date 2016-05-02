@@ -10,6 +10,8 @@
 typedef void (^myblock)(NSInteger index);
 @interface DQSelectView : UIView
 @property(nonatomic,copy)myblock block;
+@property(nonatomic,copy)void (^menuBlock)();
 
-@property(nonatomic,strong)NSArray * listTitleArray;
+-(void)setListArray:(NSArray *)array Index:(NSInteger)index;
+
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class DQDetailModel;
 @interface DQRecordViewController : UIViewController
-
+@property(nonatomic,strong)DQDetailModel * model;
 @end

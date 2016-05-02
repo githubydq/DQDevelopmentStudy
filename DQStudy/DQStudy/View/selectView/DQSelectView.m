@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 @property (weak, nonatomic) IBOutlet UIButton *menu;
 
+@property(nonatomic,strong)NSArray * listTitleArray;
 @property(nonatomic,strong)NSMutableArray * btnArray;
 @property(nonatomic,strong)UIView * line;
 
@@ -26,16 +27,16 @@
     return _btnArray;
 }
 
--(void)setListTitleArray:(NSArray *)listTitleArray{
-    _listTitleArray = listTitleArray;
+-(void)setListArray:(NSArray *)array Index:(NSInteger)index{
+    self.listTitleArray = array;
     //button
     CGFloat x = 0;
-    for (int i = 0 ; i < listTitleArray.count ; i++) {
-        CGRect rect = [listTitleArray[i] boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18],NSForegroundColorAttributeName:[UIColor whiteColor]} context:nil];
+    for (int i = 0 ; i < array.count ; i++) {
+        CGRect rect = [array[i] boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18],NSForegroundColorAttributeName:[UIColor whiteColor]} context:nil];
         CGFloat width = 20*2 + rect.size.width;
         
         UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setTitle:listTitleArray[i] forState:UIControlStateNormal];
+        [btn setTitle:array[i] forState:UIControlStateNormal];
         btn.frame = CGRectMake(x, 0, width, 44);
         [btn addTarget:self action:@selector(selectViewClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.scroll addSubview:btn];
@@ -45,18 +46,49 @@
     self.scroll.contentSize = CGSizeMake(x, 44);
     //line
     UIView * line = [[UIView alloc] init];
-    CGRect rect = [listTitleArray[0] boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18],NSForegroundColorAttributeName:[UIColor whiteColor]} context:nil];
-    line.frame = CGRectMake(20, 44-4, rect.size.width, 4);
+    
+    CGRect rect = [array[index] boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18],NSForegroundColorAttributeName:[UIColor whiteColor]} context:nil];
+    line.frame = CGRectMake([self.btnArray[index] frame].origin.x + 20, 44-4, rect.size.width, 4);
     line.backgroundColor = [UIColor orangeColor];
     [self.scroll addSubview:line];
     self.line = line;
+    //
+    
+    [self moveToIndex:index];
 }
+
+//-(void)setListTitleArray:(NSArray *)listTitleArray{
+//    _listTitleArray = listTitleArray;
+//    //button
+//    CGFloat x = 0;
+//    for (int i = 0 ; i < listTitleArray.count ; i++) {
+//        CGRect rect = [listTitleArray[i] boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18],NSForegroundColorAttributeName:[UIColor whiteColor]} context:nil];
+//        CGFloat width = 20*2 + rect.size.width;
+//        
+//        UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
+//        [btn setTitle:listTitleArray[i] forState:UIControlStateNormal];
+//        btn.frame = CGRectMake(x, 0, width, 44);
+//        [btn addTarget:self action:@selector(selectViewClick:) forControlEvents:UIControlEventTouchUpInside];
+//        [self.scroll addSubview:btn];
+//        [self.btnArray addObject:btn];
+//        x += width;
+//    }
+//    self.scroll.contentSize = CGSizeMake(x, 44);
+//    //line
+//    UIView * line = [[UIView alloc] init];
+//    
+//    CGRect rect = [self.nowStr boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18],NSForegroundColorAttributeName:[UIColor whiteColor]} context:nil];
+//    line.frame = CGRectMake(20, 44-4, rect.size.width, 4);
+//    line.backgroundColor = [UIColor orangeColor];
+//    [self.scroll addSubview:line];
+//    self.line = line;
+//}
 
 -(void)awakeFromNib{
 }
 
 - (IBAction)btn:(id)sender {
-    
+    self.menuBlock();
 }
 
 -(void)selectViewClick:(UIButton*)btn{

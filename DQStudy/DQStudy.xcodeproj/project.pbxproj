@@ -30,6 +30,13 @@
 		B369F40F1CD6AD7C006997E4 /* DQMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B369F40D1CD6AD7C006997E4 /* DQMineViewController.m */; };
 		B369F4101CD6AD7C006997E4 /* DQMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B369F40E1CD6AD7C006997E4 /* DQMineViewController.xib */; };
 		B369F4131CD6AD7C006997E4 /* DQBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B369F4121CD6AD7C006997E4 /* DQBaseViewController.m */; };
+		B3DC59711CD7A8DF001EE2D0 /* DQFMDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DC59701CD7A8DF001EE2D0 /* DQFMDBHelper.m */; };
+		B3DC59741CD7AB2A001EE2D0 /* DQListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DC59731CD7AB2A001EE2D0 /* DQListModel.m */; };
+		B3DC59771CD7AB3B001EE2D0 /* DQListDao.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DC59761CD7AB3B001EE2D0 /* DQListDao.m */; };
+		B3DC597A1CD7AB48001EE2D0 /* DQDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DC59791CD7AB48001EE2D0 /* DQDetailModel.m */; };
+		B3DC597D1CD7AB53001EE2D0 /* DQDetailDao.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DC597C1CD7AB53001EE2D0 /* DQDetailDao.m */; };
+		B3DC59811CD7BAF2001EE2D0 /* DQAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DC59801CD7BAF2001EE2D0 /* DQAddView.m */; };
+		B3DC59831CD7BB02001EE2D0 /* DQAddView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DC59821CD7BB02001EE2D0 /* DQAddView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +78,19 @@
 		B369F40E1CD6AD7C006997E4 /* DQMineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQMineViewController.xib; sourceTree = "<group>"; };
 		B369F4111CD6AD7C006997E4 /* DQBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQBaseViewController.h; sourceTree = "<group>"; };
 		B369F4121CD6AD7C006997E4 /* DQBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQBaseViewController.m; sourceTree = "<group>"; };
+		B3DC596F1CD7A8DF001EE2D0 /* DQFMDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQFMDBHelper.h; sourceTree = "<group>"; };
+		B3DC59701CD7A8DF001EE2D0 /* DQFMDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQFMDBHelper.m; sourceTree = "<group>"; };
+		B3DC59721CD7AB2A001EE2D0 /* DQListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQListModel.h; sourceTree = "<group>"; };
+		B3DC59731CD7AB2A001EE2D0 /* DQListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQListModel.m; sourceTree = "<group>"; };
+		B3DC59751CD7AB3B001EE2D0 /* DQListDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQListDao.h; sourceTree = "<group>"; };
+		B3DC59761CD7AB3B001EE2D0 /* DQListDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQListDao.m; sourceTree = "<group>"; };
+		B3DC59781CD7AB48001EE2D0 /* DQDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQDetailModel.h; sourceTree = "<group>"; };
+		B3DC59791CD7AB48001EE2D0 /* DQDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQDetailModel.m; sourceTree = "<group>"; };
+		B3DC597B1CD7AB53001EE2D0 /* DQDetailDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQDetailDao.h; sourceTree = "<group>"; };
+		B3DC597C1CD7AB53001EE2D0 /* DQDetailDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQDetailDao.m; sourceTree = "<group>"; };
+		B3DC597F1CD7BAF2001EE2D0 /* DQAddView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQAddView.h; sourceTree = "<group>"; };
+		B3DC59801CD7BAF2001EE2D0 /* DQAddView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQAddView.m; sourceTree = "<group>"; };
+		B3DC59821CD7BB02001EE2D0 /* DQAddView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQAddView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +210,16 @@
 		B369F3E71CD6AD7C006997E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B3DC596F1CD7A8DF001EE2D0 /* DQFMDBHelper.h */,
+				B3DC59701CD7A8DF001EE2D0 /* DQFMDBHelper.m */,
+				B3DC59721CD7AB2A001EE2D0 /* DQListModel.h */,
+				B3DC59731CD7AB2A001EE2D0 /* DQListModel.m */,
+				B3DC59751CD7AB3B001EE2D0 /* DQListDao.h */,
+				B3DC59761CD7AB3B001EE2D0 /* DQListDao.m */,
+				B3DC59781CD7AB48001EE2D0 /* DQDetailModel.h */,
+				B3DC59791CD7AB48001EE2D0 /* DQDetailModel.m */,
+				B3DC597B1CD7AB53001EE2D0 /* DQDetailDao.h */,
+				B3DC597C1CD7AB53001EE2D0 /* DQDetailDao.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				B369E2DF1CD76C4100B41355 /* selectView */,
+				B3DC597E1CD7B50C001EE2D0 /* addView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,6 +301,16 @@
 				B369F4121CD6AD7C006997E4 /* DQBaseViewController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		B3DC597E1CD7B50C001EE2D0 /* addView */ = {
+			isa = PBXGroup;
+			children = (
+				B3DC597F1CD7BAF2001EE2D0 /* DQAddView.h */,
+				B3DC59801CD7BAF2001EE2D0 /* DQAddView.m */,
+				B3DC59821CD7BB02001EE2D0 /* DQAddView.xib */,
+			);
+			path = addView;
 			sourceTree = "<group>";
 		};
 		F2611C27ED114452DEF6A393 /* Pods */ = {
@@ -350,6 +391,7 @@
 				B369F4001CD6AD7C006997E4 /* DQMainViewController.xib in Resources */,
 				B369F40B1CD6AD7C006997E4 /* DQToolViewController.xib in Resources */,
 				B369F3F61CD6AD7C006997E4 /* Image.bundle in Resources */,
+				B3DC59831CD7BB02001EE2D0 /* DQAddView.xib in Resources */,
 				B369F4061CD6AD7C006997E4 /* DQStudyViewController.xib in Resources */,
 				B369F3D91CD6AD7C006997E4 /* Assets.xcassets in Resources */,
 				B369E2E41CD76C6700B41355 /* DQSelectView.xib in Resources */,
@@ -412,16 +454,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DC597A1CD7AB48001EE2D0 /* DQDetailModel.m in Sources */,
 				B369F4131CD6AD7C006997E4 /* DQBaseViewController.m in Sources */,
 				B369F3F21CD6AD7C006997E4 /* DQWelcomeViewController.m in Sources */,
 				B369F3D11CD6AD7C006997E4 /* AppDelegate.m in Sources */,
+				B3DC597D1CD7AB53001EE2D0 /* DQDetailDao.m in Sources */,
+				B3DC59711CD7A8DF001EE2D0 /* DQFMDBHelper.m in Sources */,
 				B369E2E21CD76C5A00B41355 /* DQSelectView.m in Sources */,
 				B369F40F1CD6AD7C006997E4 /* DQMineViewController.m in Sources */,
 				B369E2D81CD75E6500B41355 /* DQRecordViewController.m in Sources */,
+				B3DC59771CD7AB3B001EE2D0 /* DQListDao.m in Sources */,
 				B369F3FF1CD6AD7C006997E4 /* DQMainViewController.m in Sources */,
 				B369F4051CD6AD7C006997E4 /* DQStudyViewController.m in Sources */,
+				B3DC59741CD7AB2A001EE2D0 /* DQListModel.m in Sources */,
 				B369E2E71CD76E6500B41355 /* NSArray+DQHelper.m in Sources */,
 				B369F3CE1CD6AD7C006997E4 /* main.m in Sources */,
+				B3DC59811CD7BAF2001EE2D0 /* DQAddView.m in Sources */,
 				B369F40A1CD6AD7C006997E4 /* DQToolViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

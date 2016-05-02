@@ -32,7 +32,7 @@
                         <constraint firstAttribute="width" secondItem="0em-6C-T09" secondAttribute="height" multiplier="1:1" id="BjB-jd-V8g"/>
                         <constraint firstAttribute="width" constant="50" id="vBf-3n-EA4"/>
                     </constraints>
-                    <state key="normal" title="置顶">
+                    <state key="normal" title="添加">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>

@@ -35,7 +35,7 @@
 #pragma mark load data
 -(void)loadData{
     self.itemsTitle = @[@"学习",@"工具",@"我的"];
-    self.itemsImage = @[@"study30x30",@"",@"mine30x30"];
+    self.itemsImage = @[@"study30x30",@"tool30x30",@"mine30x30"];
     self.itemsVC = @[@"DQStudyViewController",@"DQToolViewController",@"DQMineViewController"];
 }
 
