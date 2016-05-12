@@ -13,4 +13,5 @@
 +(BOOL)deleteAtModel:(DQDetailModel*)model;
 +(BOOL)updateAtModel:(DQDetailModel*)model;
 +(NSMutableArray*)findAtTitle:(NSString*)title;
++(NSMutableArray*)searchWithString:(NSString*)str From:(NSString*)title;
 @end

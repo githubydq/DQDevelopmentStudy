@@ -7,16 +7,28 @@
 //
 
 #import "DQToolViewController.h"
+#import "DQQRCodeScanViewController.h"
+#import "DQQRCodeCreateViewController.h"
 
-@interface DQToolViewController ()
+typedef NS_ENUM(NSInteger, QRCodeStyle) {
+    QRCodeStyleScan = 0,
+    QRCodeStyleCreate
+};
 
+@interface DQToolViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *mytable;
+
+
+@property(nonatomic,strong)NSArray * listArray;
 @end
 
 @implementation DQToolViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    [self loadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +36,73 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark -
+#pragma mark load data
+-(void)loadData{
+    self.listArray = @[@[@"每日一看"],@[@"二维码"]];
 }
-*/
 
+#pragma mark -
+#pragma mark table delegate
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.listArray.count;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.listArray[section] count];
+}
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString * identify = @"toolcell";
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identify];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    if ([self.listArray[indexPath.section][indexPath.row] length] > 0) {
+        cell.textLabel.text = self.listArray[indexPath.section][indexPath.row];
+    }
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            
+        }
+    }else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            [self choiceQRCodeStyle];
+        }
+    }else if (indexPath.section == 2) {
+        if (indexPath.row == 0) {
+            
+        }
+    }
+}
+
+#pragma mark -
+#pragma mark QRCode
+-(void)choiceQRCodeStyle{
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"请选择二维码的使用方式" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    [alert addAction:[UIAlertAction actionWithTitle:@"扫描" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self intoQRCodeScanVC];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"生成" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self intoQRCodeCreateVC];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+-(void)intoQRCodeScanVC{
+    DQQRCodeScanViewController * scan = [[DQQRCodeScanViewController alloc] init];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:scan animated:NO];
+    self.hidesBottomBarWhenPushed = NO;
+}
+-(void)intoQRCodeCreateVC{
+    DQQRCodeCreateViewController * create = [[DQQRCodeCreateViewController alloc] init];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:create animated:NO];
+    self.hidesBottomBarWhenPushed = NO;
+}
 @end

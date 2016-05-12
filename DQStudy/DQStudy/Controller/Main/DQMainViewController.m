@@ -52,8 +52,8 @@
     
     for (int j = 0 ; j < self.viewControllers.count; j++) {
         UIViewController * vc = VCs[j];
-        vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:self.itemsTitle[j] image:[UIImage imageNamed:self.itemsImage[j]] selectedImage:nil];
-        [vc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]} forState:UIControlStateNormal];
+        vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:self.itemsTitle[j] image:[UIImage imageNamed:self.itemsImage[j]]  selectedImage:nil];
+        [vc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:0.0/255.0 green:122.0/255.0 blue:255.0/255.0 alpha:1]} forState:UIControlStateNormal];
         
     }
 }

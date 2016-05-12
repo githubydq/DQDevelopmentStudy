@@ -7,13 +7,15 @@
 //
 
 #import "DQStudyViewController.h"
-#import "DQRecordViewController.h"
 #import "DQDetailDao.h"
 #import "DQDetailModel.h"
 #import "DQSelectView.h"
 #import "DQAddView.h"
 
-@interface DQStudyViewController ()<UITableViewDataSource,UITableViewDelegate,AddViewDelegate>
+#import "DQRecordViewController.h"
+#import "DQSearchViewController.h"
+
+@interface DQStudyViewController ()<UITableViewDataSource,UITableViewDelegate,AddViewDelegate,UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *table;
 
 @property(nonatomic,strong)UISearchBar * search;
@@ -40,18 +42,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    if (!self.selectView) {
-        [self configNav];
-    }
-}
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    if (self.addView) {
-        [self.addView removeFromSuperview];
-    }
-}
 
 -(UISearchBar *)search{
     if (!_search) {
@@ -91,6 +81,8 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.table.tableHeaderView = self.search;
     self.table.contentOffset = CGPointMake(0, 50);
+    
+    self.search.delegate = self;
     
     [self configNav];
 }
@@ -133,12 +125,9 @@
     DQRecordViewController * record = [[DQRecordViewController alloc] init];
     record.model = self.recordArray[indexPath.row];
     
-    self.hidesBottomBarWhenPushed = YES;
-    [self.selectView removeFromSuperview];
-    self.selectView = nil;
-    [self.navigationItem.backBarButtonItem setTitle:self.listArray[self.currentIndex]];
-    [self.navigationController pushViewController:record animated:NO];
-    self.hidesBottomBarWhenPushed = NO;
+    [self.navigationController addChildViewController:record];
+    record.view.frame = [UIScreen mainScreen].bounds;
+    [[UIApplication sharedApplication].keyWindow addSubview:record.view];
 }
 -(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
     if (scrollView.contentOffset.y >= 25 && scrollView.contentOffset.y <= 50) {
@@ -146,6 +135,26 @@
     }
 }
 
+
+#pragma mark -
+#pragma mark search bar delegate
+-(BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    DQSearchViewController * search = [[DQSearchViewController alloc] init];
+    search.nowTitle = self.listArray[self.currentIndex];
+    DQBaseViewController * nav = [[DQBaseViewController alloc] initWithRootViewController:search];
+    [self.navigationController addChildViewController:nav];
+    nav.view.frame = CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT);
+    nav.navigationBar.barTintColor = [UIColor whiteColor];
+    [self.navigationController.view addSubview:nav.view];
+    [UIView animateWithDuration:0.3 animations:^{
+        nav.view.transform = CGAffineTransformMakeTranslation(0, -44);
+        nav.navigationBar.barTintColor = [UIColor blackColor];
+    }completion:^(BOOL finished) {
+        [self.tabBarController.tabBar setHidden:YES];
+    }];
+    
+    return NO;
+}
 
 
 #pragma mark -

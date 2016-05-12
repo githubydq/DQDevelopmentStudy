@@ -57,4 +57,26 @@
     }
     return nil;
 }
+
++(NSMutableArray *)searchWithString:(NSString *)str From:(NSString *)title{
+    FMDatabase * db = [DQFMDBHelper database];
+    if ([db open]) {
+        NSMutableArray * resultArray = [[NSMutableArray alloc] init];
+        FMResultSet * rs = [db executeQuery:@"select * from detail where title=?",title];
+        while (rs.next) {
+            if ([[rs stringForColumnIndex:2] containsString:str]) {
+                DQDetailModel * model = [[DQDetailModel alloc] init];
+                model.date = [rs stringForColumnIndex:0];
+                model.title = [rs stringForColumnIndex:1];
+                model.name = [rs stringForColumnIndex:2];
+                model.detail = [rs stringForColumnIndex:3];
+                model.image = [rs stringForColumnIndex:4];
+                [resultArray addObject:model];
+            }
+        }
+        [db close];
+        return resultArray;
+    }
+    return nil;
+}
 @end

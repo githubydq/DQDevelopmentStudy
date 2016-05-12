@@ -17,6 +17,7 @@
 @interface DQRecordViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewToBottom;
+@property (weak, nonatomic) IBOutlet UILabel *titleLable;
 
 @end
 
@@ -41,20 +42,44 @@
 
 #pragma mark -
 #pragma mark config UI
--(void)configNav{
-    self.textView.text  = self.model.detail;
-    
-    self.navigationItem.title = self.model.name;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(recordRightClick)];
-}
 
--(void)recordRightClick{
+- (IBAction)backClick:(id)sender {
+    [self quit];
+}
+- (IBAction)saveClick:(id)sender {
     if (![self.textView.text isEqualToString:self.model.detail]) {
         self.model.detail = self.textView.text;
         [DQDetailDao updateAtModel:self.model];
-        [self.navigationController popViewControllerAnimated:YES];
+        [self quit];
     }
 }
+-(void)quit{
+    if ([self.textView isFirstResponder]) {
+        [self.textView resignFirstResponder];
+    }
+    
+    [UIView animateKeyframesWithDuration:0.8 delay:0 options:UIViewKeyframeAnimationOptionLayoutSubviews animations:^{
+        [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:0.8 animations:^{
+            self.view.transform = CGAffineTransformMakeTranslation(SCREEN_WIDTH, 0);
+        }];
+        [UIView addKeyframeWithRelativeStartTime:0.8 relativeDuration:0.1 animations:^{
+            self.view.transform = CGAffineTransformMakeTranslation(SCREEN_WIDTH-50, 0);
+        }];
+        [UIView addKeyframeWithRelativeStartTime:0.9 relativeDuration:0.1 animations:^{
+            self.view.transform = CGAffineTransformMakeTranslation(SCREEN_WIDTH, 0);
+        }];
+    } completion:^(BOOL finished) {
+        [self.view removeFromSuperview];
+        [self removeFromParentViewController];
+    }];
+}
+
+
+-(void)configNav{
+    self.textView.text  = self.model.detail;
+    self.titleLable.text = self.model.name;
+}
+
 
 #pragma mark -
 #pragma mark notification

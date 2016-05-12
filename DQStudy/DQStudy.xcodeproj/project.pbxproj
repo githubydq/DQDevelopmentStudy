@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		375B866F73CE6E6D2DB96AFE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A551913D65EB94424BE3FCB1 /* libPods.a */; };
+		B3081F4C1CE4AE5900F13C62 /* DQQRcodeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B3081F4B1CE4AE5900F13C62 /* DQQRcodeLayer.m */; };
+		B3081F501CE4E40C00F13C62 /* DQQRCodeCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3081F4E1CE4E40C00F13C62 /* DQQRCodeCreateViewController.m */; };
+		B3081F511CE4E40C00F13C62 /* DQQRCodeCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3081F4F1CE4E40C00F13C62 /* DQQRCodeCreateViewController.xib */; };
+		B31EA6431CE4911A00ACB506 /* DQQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31EA6411CE4911A00ACB506 /* DQQRCodeScanViewController.m */; };
+		B31EA6441CE4911A00ACB506 /* DQQRCodeScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31EA6421CE4911A00ACB506 /* DQQRCodeScanViewController.xib */; };
+		B349EF701CE343C1005236EC /* DQSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B349EF6E1CE343C1005236EC /* DQSearchViewController.m */; };
+		B349EF711CE343C1005236EC /* DQSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B349EF6F1CE343C1005236EC /* DQSearchViewController.xib */; };
 		B369E2D81CD75E6500B41355 /* DQRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B369E2D61CD75E6500B41355 /* DQRecordViewController.m */; };
 		B369E2D91CD75E6500B41355 /* DQRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B369E2D71CD75E6500B41355 /* DQRecordViewController.xib */; };
 		B369E2E21CD76C5A00B41355 /* DQSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = B369E2E11CD76C5A00B41355 /* DQSelectView.m */; };
@@ -43,6 +50,17 @@
 		371798B9E96C58D83B0A38AB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5C19BD3ABDF6AF3534B88C1E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A551913D65EB94424BE3FCB1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3081F4A1CE4AE5900F13C62 /* DQQRcodeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQQRcodeLayer.h; sourceTree = "<group>"; };
+		B3081F4B1CE4AE5900F13C62 /* DQQRcodeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQQRcodeLayer.m; sourceTree = "<group>"; };
+		B3081F4D1CE4E40C00F13C62 /* DQQRCodeCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQQRCodeCreateViewController.h; sourceTree = "<group>"; };
+		B3081F4E1CE4E40C00F13C62 /* DQQRCodeCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQQRCodeCreateViewController.m; sourceTree = "<group>"; };
+		B3081F4F1CE4E40C00F13C62 /* DQQRCodeCreateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQQRCodeCreateViewController.xib; sourceTree = "<group>"; };
+		B31EA6401CE4911A00ACB506 /* DQQRCodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQQRCodeScanViewController.h; sourceTree = "<group>"; };
+		B31EA6411CE4911A00ACB506 /* DQQRCodeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQQRCodeScanViewController.m; sourceTree = "<group>"; };
+		B31EA6421CE4911A00ACB506 /* DQQRCodeScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQQRCodeScanViewController.xib; sourceTree = "<group>"; };
+		B349EF6D1CE343C1005236EC /* DQSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQSearchViewController.h; sourceTree = "<group>"; };
+		B349EF6E1CE343C1005236EC /* DQSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQSearchViewController.m; sourceTree = "<group>"; };
+		B349EF6F1CE343C1005236EC /* DQSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQSearchViewController.xib; sourceTree = "<group>"; };
 		B369E2D51CD75E6500B41355 /* DQRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQRecordViewController.h; sourceTree = "<group>"; };
 		B369E2D61CD75E6500B41355 /* DQRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQRecordViewController.m; sourceTree = "<group>"; };
 		B369E2D71CD75E6500B41355 /* DQRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQRecordViewController.xib; sourceTree = "<group>"; };
@@ -113,6 +131,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B3081F491CE4AD9600F13C62 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				B3081F4A1CE4AE5900F13C62 /* DQQRcodeLayer.h */,
+				B3081F4B1CE4AE5900F13C62 /* DQQRcodeLayer.m */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+		B31EA63E1CE4897D00ACB506 /* LookDaily */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LookDaily;
+			sourceTree = "<group>";
+		};
+		B31EA63F1CE4897D00ACB506 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				B31EA6401CE4911A00ACB506 /* DQQRCodeScanViewController.h */,
+				B31EA6411CE4911A00ACB506 /* DQQRCodeScanViewController.m */,
+				B31EA6421CE4911A00ACB506 /* DQQRCodeScanViewController.xib */,
+				B3081F4D1CE4E40C00F13C62 /* DQQRCodeCreateViewController.h */,
+				B3081F4E1CE4E40C00F13C62 /* DQQRCodeCreateViewController.m */,
+				B3081F4F1CE4E40C00F13C62 /* DQQRCodeCreateViewController.xib */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
 		B369E2DF1CD76C4100B41355 /* selectView */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +222,7 @@
 			children = (
 				B369F3E41CD6AD7C006997E4 /* Cagetory */,
 				B369F3E51CD6AD7C006997E4 /* Layout */,
+				B3081F491CE4AD9600F13C62 /* Layer */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -272,6 +320,9 @@
 				B369E2D51CD75E6500B41355 /* DQRecordViewController.h */,
 				B369E2D61CD75E6500B41355 /* DQRecordViewController.m */,
 				B369E2D71CD75E6500B41355 /* DQRecordViewController.xib */,
+				B349EF6D1CE343C1005236EC /* DQSearchViewController.h */,
+				B349EF6E1CE343C1005236EC /* DQSearchViewController.m */,
+				B349EF6F1CE343C1005236EC /* DQSearchViewController.xib */,
 			);
 			path = Study;
 			sourceTree = "<group>";
@@ -282,6 +333,8 @@
 				B369F4071CD6AD7C006997E4 /* DQToolViewController.h */,
 				B369F4081CD6AD7C006997E4 /* DQToolViewController.m */,
 				B369F4091CD6AD7C006997E4 /* DQToolViewController.xib */,
+				B31EA63E1CE4897D00ACB506 /* LookDaily */,
+				B31EA63F1CE4897D00ACB506 /* QRCode */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -390,7 +443,10 @@
 				B369F3DC1CD6AD7C006997E4 /* LaunchScreen.storyboard in Resources */,
 				B369F4001CD6AD7C006997E4 /* DQMainViewController.xib in Resources */,
 				B369F40B1CD6AD7C006997E4 /* DQToolViewController.xib in Resources */,
+				B349EF711CE343C1005236EC /* DQSearchViewController.xib in Resources */,
+				B3081F511CE4E40C00F13C62 /* DQQRCodeCreateViewController.xib in Resources */,
 				B369F3F61CD6AD7C006997E4 /* Image.bundle in Resources */,
+				B31EA6441CE4911A00ACB506 /* DQQRCodeScanViewController.xib in Resources */,
 				B3DC59831CD7BB02001EE2D0 /* DQAddView.xib in Resources */,
 				B369F4061CD6AD7C006997E4 /* DQStudyViewController.xib in Resources */,
 				B369F3D91CD6AD7C006997E4 /* Assets.xcassets in Resources */,
@@ -456,12 +512,15 @@
 			files = (
 				B3DC597A1CD7AB48001EE2D0 /* DQDetailModel.m in Sources */,
 				B369F4131CD6AD7C006997E4 /* DQBaseViewController.m in Sources */,
+				B3081F4C1CE4AE5900F13C62 /* DQQRcodeLayer.m in Sources */,
 				B369F3F21CD6AD7C006997E4 /* DQWelcomeViewController.m in Sources */,
+				B349EF701CE343C1005236EC /* DQSearchViewController.m in Sources */,
 				B369F3D11CD6AD7C006997E4 /* AppDelegate.m in Sources */,
 				B3DC597D1CD7AB53001EE2D0 /* DQDetailDao.m in Sources */,
 				B3DC59711CD7A8DF001EE2D0 /* DQFMDBHelper.m in Sources */,
 				B369E2E21CD76C5A00B41355 /* DQSelectView.m in Sources */,
 				B369F40F1CD6AD7C006997E4 /* DQMineViewController.m in Sources */,
+				B31EA6431CE4911A00ACB506 /* DQQRCodeScanViewController.m in Sources */,
 				B369E2D81CD75E6500B41355 /* DQRecordViewController.m in Sources */,
 				B3DC59771CD7AB3B001EE2D0 /* DQListDao.m in Sources */,
 				B369F3FF1CD6AD7C006997E4 /* DQMainViewController.m in Sources */,
@@ -469,6 +528,7 @@
 				B3DC59741CD7AB2A001EE2D0 /* DQListModel.m in Sources */,
 				B369E2E71CD76E6500B41355 /* NSArray+DQHelper.m in Sources */,
 				B369F3CE1CD6AD7C006997E4 /* main.m in Sources */,
+				B3081F501CE4E40C00F13C62 /* DQQRCodeCreateViewController.m in Sources */,
 				B3DC59811CD7BAF2001EE2D0 /* DQAddView.m in Sources */,
 				B369F40A1CD6AD7C006997E4 /* DQToolViewController.m in Sources */,
 			);
@@ -513,6 +573,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ydq19920924@icloud.com (Y7MKB6E9RY)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -535,7 +596,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "86e51ebd-2952-4607-9da6-be08b12494ba";
 				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -556,6 +619,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ydq19920924@icloud.com (Y7MKB6E9RY)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -571,8 +635,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "86e51ebd-2952-4607-9da6-be08b12494ba";
 				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Release;
 		};
@@ -582,11 +647,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "${SRCROOT}/DQStudy/PrefixHeader.pch";
 				INFOPLIST_FILE = DQStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ydq.DQStudy;
+				PRODUCT_BUNDLE_IDENTIFIER = ydq.DQDevelopmentStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c6fa6312-2144-4c5d-b82d-b3c2939f43e3";
 			};
 			name = Debug;
 		};
@@ -596,11 +663,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "${SRCROOT}/DQStudy/PrefixHeader.pch";
 				INFOPLIST_FILE = DQStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ydq.DQStudy;
+				PRODUCT_BUNDLE_IDENTIFIER = ydq.DQDevelopmentStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c6fa6312-2144-4c5d-b82d-b3c2939f43e3";
 			};
 			name = Release;
 		};

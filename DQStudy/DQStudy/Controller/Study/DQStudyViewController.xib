@@ -33,7 +33,7 @@
                         <constraint firstAttribute="width" constant="50" id="vBf-3n-EA4"/>
                     </constraints>
                     <state key="normal" title="添加">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
