@@ -7,8 +7,10 @@
 //
 
 #import "DQToolViewController.h"
+#import "DQLookDailyViewController.h"
 #import "DQQRCodeScanViewController.h"
 #import "DQQRCodeCreateViewController.h"
+
 
 typedef NS_ENUM(NSInteger, QRCodeStyle) {
     QRCodeStyleScan = 0,
@@ -29,6 +31,7 @@ typedef NS_ENUM(NSInteger, QRCodeStyle) {
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self loadData];
+    [self configUI];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,6 +43,13 @@ typedef NS_ENUM(NSInteger, QRCodeStyle) {
 #pragma mark load data
 -(void)loadData{
     self.listArray = @[@[@"每日一看"],@[@"二维码"]];
+}
+
+#pragma mark -
+#pragma mark UI
+-(void)configUI{
+    self.navigationItem.title = @"工具";
+    
 }
 
 #pragma mark -
@@ -67,7 +77,8 @@ typedef NS_ENUM(NSInteger, QRCodeStyle) {
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            
+            DQLookDailyViewController * look = [[DQLookDailyViewController alloc] init];
+            [self.navigationController pushViewController:look animated:NO];
         }
     }else if (indexPath.section == 1) {
         if (indexPath.row == 0) {

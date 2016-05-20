@@ -11,7 +11,7 @@
 @implementation DQDetailModel
 
 -(NSString *)description{
-    return [NSString stringWithFormat:@"%@,%@,%@,%@,%@",self.date,self.title, self.name, self.detail, self.image];
+    return [NSString stringWithFormat:@"%ld,%@,%@,%@,%@",self.myID,self.title, self.name, self.detail, self.image];
 }
 
 @end

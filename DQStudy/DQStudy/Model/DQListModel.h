@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface DQListModel : NSObject
+@property(nonatomic,assign)NSInteger myID;
 @property(nonatomic,copy)NSString * title;
 @end

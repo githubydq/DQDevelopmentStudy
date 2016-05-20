@@ -25,7 +25,7 @@
 +(BOOL)deleteAtModel:(DQListModel *)model{
     FMDatabase * db = [DQFMDBHelper database];
     if ([db open]) {
-        BOOL isSuccese = [db executeUpdate:@"delete from list where title=?",model.title];
+        BOOL isSuccese = [db executeUpdate:@"delete from list where id=?",model.myID];
         [db close];
         return isSuccese;
     }
@@ -39,7 +39,8 @@
         FMResultSet * rs = [db executeQuery:@"select * from list"];
         while (rs.next) {
             DQListModel * model = [[DQListModel alloc] init];
-            model.title = [rs stringForColumnIndex:0];
+            model.myID = [rs intForColumnIndex:0];
+            model.title = [rs stringForColumnIndex:1];
             [listArray addObject:model];
         }
         [db close];

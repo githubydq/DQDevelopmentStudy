@@ -17,7 +17,6 @@
 @interface DQRecordViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewToBottom;
-@property (weak, nonatomic) IBOutlet UILabel *titleLable;
 
 @end
 
@@ -27,7 +26,7 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    [self configNav];
+    [self configUI];
     [self addNotification];
 }
 
@@ -43,22 +42,32 @@
 #pragma mark -
 #pragma mark config UI
 
-- (IBAction)backClick:(id)sender {
-    [self quit];
+-(void)configUI{
+    self.navigationItem.title = self.model.name;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(recordRightClick)];
+    
+    self.textView.text  = self.model.detail;
+    NSArray * array = [USER_DEFAULTS objectForKey:RECORD_BGCOLOR];
+    self.textView.backgroundColor = [UIColor colorWithRed:[array[0] floatValue]/255.0 green:[array[1] floatValue]/255.0 blue:[array[2] floatValue]/255.0 alpha:1.0];
+    self.textView.font = [UIFont systemFontOfSize:[[USER_DEFAULTS objectForKey:RECORD_FONTSIZE] floatValue]];
 }
-- (IBAction)saveClick:(id)sender {
+
+-(void)recordRightClick{
     if (![self.textView.text isEqualToString:self.model.detail]) {
         self.model.detail = self.textView.text;
         [DQDetailDao updateAtModel:self.model];
-        [self quit];
     }
 }
+
+/**
+ * 该方法废弃
+ */
 -(void)quit{
     if ([self.textView isFirstResponder]) {
         [self.textView resignFirstResponder];
     }
     
-    [UIView animateKeyframesWithDuration:0.8 delay:0 options:UIViewKeyframeAnimationOptionLayoutSubviews animations:^{
+    [UIView animateKeyframesWithDuration:0.5 delay:0 options:UIViewKeyframeAnimationOptionLayoutSubviews animations:^{
         [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:0.8 animations:^{
             self.view.transform = CGAffineTransformMakeTranslation(SCREEN_WIDTH, 0);
         }];
@@ -73,13 +82,6 @@
         [self removeFromParentViewController];
     }];
 }
-
-
--(void)configNav{
-    self.textView.text  = self.model.detail;
-    self.titleLable.text = self.model.name;
-}
-
 
 #pragma mark -
 #pragma mark notification

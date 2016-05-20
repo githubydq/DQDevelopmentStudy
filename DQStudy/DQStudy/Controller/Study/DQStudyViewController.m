@@ -21,9 +21,9 @@
 @property(nonatomic,strong)UISearchBar * search;
 @property(nonatomic,strong)DQSelectView * selectView;
 
-@property(nonatomic,strong)NSMutableArray * listArray;
-@property(nonatomic,assign)NSInteger currentIndex;
-@property(nonatomic,strong)NSMutableArray * recordArray;
+@property(nonatomic,strong)NSMutableArray * listArray;/**<类别数组*/
+@property(nonatomic,assign)NSInteger currentIndex;/**<当前记录类别*/
+@property(nonatomic,strong)NSMutableArray * recordArray;/**<记录数组*/
 
 @property(nonatomic,strong)DQAddView * addView;
 @end
@@ -40,6 +40,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if (self.selectView) {
+        [self.selectView setHidden:NO];
+    }
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    if (self.selectView) {
+        [self.selectView setHidden:YES];
+    }
 }
 
 
@@ -124,10 +136,13 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     DQRecordViewController * record = [[DQRecordViewController alloc] init];
     record.model = self.recordArray[indexPath.row];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:record animated:NO];
+    self.hidesBottomBarWhenPushed = NO;
     
-    [self.navigationController addChildViewController:record];
-    record.view.frame = [UIScreen mainScreen].bounds;
-    [[UIApplication sharedApplication].keyWindow addSubview:record.view];
+//    [self.navigationController addChildViewController:record];
+//    record.view.frame = [UIScreen mainScreen].bounds;
+//    [[UIApplication sharedApplication].keyWindow addSubview:record.view];
 }
 -(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
     if (scrollView.contentOffset.y >= 25 && scrollView.contentOffset.y <= 50) {
@@ -141,17 +156,21 @@
 -(BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
     DQSearchViewController * search = [[DQSearchViewController alloc] init];
     search.nowTitle = self.listArray[self.currentIndex];
-    DQBaseViewController * nav = [[DQBaseViewController alloc] initWithRootViewController:search];
-    [self.navigationController addChildViewController:nav];
-    nav.view.frame = CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT);
-    nav.navigationBar.barTintColor = [UIColor whiteColor];
-    [self.navigationController.view addSubview:nav.view];
-    [UIView animateWithDuration:0.3 animations:^{
-        nav.view.transform = CGAffineTransformMakeTranslation(0, -44);
-        nav.navigationBar.barTintColor = [UIColor blackColor];
-    }completion:^(BOOL finished) {
-        [self.tabBarController.tabBar setHidden:YES];
-    }];
+    
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:search animated:NO];
+    self.hidesBottomBarWhenPushed = NO;
+//    DQBaseViewController * nav = [[DQBaseViewController alloc] initWithRootViewController:search];
+//    [self.navigationController addChildViewController:nav];
+//    nav.view.frame = CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT);
+//    nav.navigationBar.barTintColor = [UIColor whiteColor];
+//    [self.navigationController.view addSubview:nav.view];
+//    [UIView animateWithDuration:0.3 animations:^{
+//        nav.view.transform = CGAffineTransformMakeTranslation(0, -44);
+//        nav.navigationBar.barTintColor = [UIColor blackColor];
+//    }completion:^(BOOL finished) {
+//        [self.tabBarController.tabBar setHidden:YES];
+//    }];
     
     return NO;
 }
@@ -168,12 +187,7 @@
 }
 
 -(void)addRecordWithTitle:(NSString *)str{
-    NSDateFormatter * format = [[NSDateFormatter alloc] init];
-    format.dateFormat = @"yyyyMMddHHmmss";
-    NSDate * date = [NSDate date];
-    
     DQDetailModel * model = [[DQDetailModel alloc]init];
-    model.date = [format stringFromDate:date];
     model.title = self.listArray[self.currentIndex];
     model.name = str;
     model.detail = @"";

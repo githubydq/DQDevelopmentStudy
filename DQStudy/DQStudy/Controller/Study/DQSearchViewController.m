@@ -9,6 +9,7 @@
 #import "DQSearchViewController.h"
 #import "DQDetailDao.h"
 #import "DQDetailModel.h"
+#import "DQRecordViewController.h"
 
 @interface DQSearchViewController ()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTable;
@@ -23,14 +24,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self loadData];
     [self configNav];
-    
-    [UIView animateWithDuration:1 animations:^{
-        self.search.bounds = CGRectMake(0, 0, SCREEN_WIDTH-70-10, 44);
-        self.search.center = CGPointMake(SCREEN_WIDTH/2.0-70/2.0, 44/2.0);
-    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,13 +37,25 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    [self configNav];
+    [self.search setHidden:NO];
+    [self.cancel setHidden:NO];
+    
+    [self.search becomeFirstResponder];
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.search setHidden:YES];
+    [self.cancel setHidden:YES];
     
+    [self.search resignFirstResponder];
 }
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self removeFromParentViewController];
+//    [self.view removeFromSuperview];
+}
+
 
 #pragma mark -
 #pragma mark load data
@@ -57,7 +66,9 @@
 #pragma mark -
 #pragma mark config nav
 -(void)configNav{
-    self.search = [[UISearchBar alloc] initWithFrame:CGRectMake(10, 0, SCREEN_WIDTH-10*2, 44)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    self.search = [[UISearchBar alloc] initWithFrame:CGRectMake(10, 0, SCREEN_WIDTH-10-70, 44)];
     self.search.placeholder = @"请输入搜索的内容";
     [self.navigationController.navigationBar addSubview:self.search];
     self.search.delegate = self;
@@ -70,9 +81,7 @@
     
 }
 -(void)searchCancelClick{
-    [self.tabBarController.tabBar setHidden:NO];
-    [self.navigationController.view removeFromSuperview];
-    [self.navigationController removeFromParentViewController];
+    [self.navigationController popViewControllerAnimated:NO];
     
 }
 
@@ -92,6 +101,14 @@
         cell.textLabel.text = model.name;
     }
     return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DQDetailModel * model = self.resultArray[indexPath.row];
+    DQRecordViewController * record = [[DQRecordViewController alloc] init];
+    record.model = model;
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:record animated:NO];
+//    [self.navigationController popViewControllerAnimated:NO];
 }
 
 #pragma mark -

@@ -160,6 +160,8 @@
     }
 }
 
+#pragma mark -
+#pragma mark 闪光灯的开启
 
 - (IBAction)turnTorch:(UIButton *)sender {
     Class captureDeviceClass = NSClassFromString(@"AVCaptureDevice");

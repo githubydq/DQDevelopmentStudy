@@ -14,7 +14,7 @@
 +(BOOL)save:(DQDetailModel * )model{
     FMDatabase * db = [DQFMDBHelper database];
     if ([db open]) {
-        BOOL isSuccese = [db executeUpdate:@"insert into detail(date, title, name, detail, image) values(?, ?, ?, ?, ?)", model.date, model.title, model.name, model.detail, model.image];
+        BOOL isSuccese = [db executeUpdate:@"insert into detail(id, title, name, detail, image) values(?, ?, ?, ?, ?)", model.myID, model.title, model.name, model.detail, model.image];
         [db close];
         return isSuccese;
     }
@@ -23,7 +23,7 @@
 +(BOOL)deleteAtModel:(DQDetailModel*)model{
     FMDatabase * db = [DQFMDBHelper database];
     if ([db open]) {
-        BOOL isSuccese = [db executeUpdate:@"delete from detail where date=?",model.date];
+        BOOL isSuccese = [db executeUpdate:@"delete from detail where id=?",model.myID];
         [db close];
         return isSuccese;
     }
@@ -32,12 +32,13 @@
 +(BOOL)updateAtModel:(DQDetailModel*)model{
     FMDatabase * db = [DQFMDBHelper database];
     if ([db open]) {
-        BOOL isSuccese = [db executeUpdate:@"update detail set name=?, detail=?, image=? where date=?",model.name, model.detail, model.image, model.date];
+        BOOL isSuccese = [db executeUpdate:@"update detail set name=?, detail=?, image=? where id=?",model.name, model.detail, model.image, model.myID];
         [db close];
         return isSuccese;
     }
     return NO;
 }
+//按标题查找记录
 +(NSMutableArray*)findAtTitle:(NSString*)title{
     FMDatabase * db = [DQFMDBHelper database];
     if ([db open]) {
@@ -45,7 +46,7 @@
         FMResultSet * rs = [db executeQuery:@"select * from detail where title=?",title];
         while (rs.next) {
             DQDetailModel * model = [[DQDetailModel alloc] init];
-            model.date = [rs stringForColumnIndex:0];
+            model.myID = [rs intForColumnIndex:0];
             model.title = [rs stringForColumnIndex:1];
             model.name = [rs stringForColumnIndex:2];
             model.detail = [rs stringForColumnIndex:3];
@@ -57,7 +58,7 @@
     }
     return nil;
 }
-
+//检索记录
 +(NSMutableArray *)searchWithString:(NSString *)str From:(NSString *)title{
     FMDatabase * db = [DQFMDBHelper database];
     if ([db open]) {
@@ -66,7 +67,7 @@
         while (rs.next) {
             if ([[rs stringForColumnIndex:2] containsString:str]) {
                 DQDetailModel * model = [[DQDetailModel alloc] init];
-                model.date = [rs stringForColumnIndex:0];
+                model.myID = [rs intForColumnIndex:0];
                 model.title = [rs stringForColumnIndex:1];
                 model.name = [rs stringForColumnIndex:2];
                 model.detail = [rs stringForColumnIndex:3];

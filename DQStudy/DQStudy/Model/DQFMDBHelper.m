@@ -21,8 +21,8 @@ static FMDatabase * db = nil;
         NSFileManager * filemanager = [NSFileManager defaultManager];
         if (![filemanager fileExistsAtPath:path]) {
             if ([db open]) {
-                NSString * createList = @"create table list(title text primary key)";
-                NSString * createDetail = @"create table detail(date text primary key, title text, name text, detail text, image text)";
+                NSString * createList = @"create table list(id integer primary key autoincrement, title text)";
+                NSString * createDetail = @"create table detail(id integer primary key autoincrement, title text, name text, detail text, image text)";
                 [db executeStatements:createList];
                 [db executeStatements:createDetail];
                 [db close];

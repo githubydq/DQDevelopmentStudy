@@ -18,4 +18,11 @@
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
+//记录界面设置
+#define RECORD_FONTSIZE @"recordfontsize"
+#define RECORD_BGCOLOR @"recordbgcolor"
+
+//[NSUserDefaults standardUserDefaults]
+#define USER_DEFAULTS [NSUserDefaults standardUserDefaults]
+
 #endif /* PrefixHeader_pch */

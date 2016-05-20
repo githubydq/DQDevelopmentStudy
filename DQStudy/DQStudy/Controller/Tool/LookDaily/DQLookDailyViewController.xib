@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DQLookDailyViewController">
+            <connections>
+                <outlet property="showView" destination="iSV-54-4ku" id="X0g-oh-qFb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSV-54-4ku">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="WTs-Va-yE5" appends="YES" id="5Ea-gY-bAy"/>
+                    </connections>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="iSV-54-4ku" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Djl-dP-Wnd"/>
+                <constraint firstAttribute="bottom" secondItem="iSV-54-4ku" secondAttribute="bottom" id="lQ2-xM-b0p"/>
+                <constraint firstAttribute="trailing" secondItem="iSV-54-4ku" secondAttribute="trailing" id="r5H-F2-9CB"/>
+                <constraint firstItem="iSV-54-4ku" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="t9r-Bf-428"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="236.5" y="321"/>
+        </view>
+        <tapGestureRecognizer id="WTs-Va-yE5">
+            <connections>
+                <action selector="showViewTap:" destination="-1" id="Q6U-xE-LBq"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

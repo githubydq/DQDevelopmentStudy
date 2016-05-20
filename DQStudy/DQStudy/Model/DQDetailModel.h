@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface DQDetailModel : NSObject
-@property(nonatomic,copy)NSString * date;
+@property(nonatomic,assign)NSInteger myID;
 @property(nonatomic,copy)NSString * title;
 @property(nonatomic,copy)NSString * name;
 @property(nonatomic,copy)NSString * detail;

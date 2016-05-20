@@ -21,6 +21,15 @@
 #pragma mark appdelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //设置记录界面默认设置
+    if (![USER_DEFAULTS objectForKey:RECORD_FONTSIZE]) {
+        [USER_DEFAULTS setObject:@18 forKey:RECORD_FONTSIZE];
+    }
+    if (![USER_DEFAULTS objectForKey:RECORD_BGCOLOR]) {
+        [USER_DEFAULTS setObject:@[@199,@237,@204] forKey:RECORD_BGCOLOR];
+    }
+    
+    //设置根视图
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     DQWelcomeViewController * welcome = [[DQWelcomeViewController alloc] init];
     self.window.rootViewController = welcome;

@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		375B866F73CE6E6D2DB96AFE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A551913D65EB94424BE3FCB1 /* libPods.a */; };
+		B30776371CEFC33200203398 /* DQRecordBGColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B30776351CEFC33200203398 /* DQRecordBGColorViewController.m */; };
+		B30776381CEFC33200203398 /* DQRecordBGColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B30776361CEFC33200203398 /* DQRecordBGColorViewController.xib */; };
 		B3081F4C1CE4AE5900F13C62 /* DQQRcodeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B3081F4B1CE4AE5900F13C62 /* DQQRcodeLayer.m */; };
 		B3081F501CE4E40C00F13C62 /* DQQRCodeCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3081F4E1CE4E40C00F13C62 /* DQQRCodeCreateViewController.m */; };
 		B3081F511CE4E40C00F13C62 /* DQQRCodeCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3081F4F1CE4E40C00F13C62 /* DQQRCodeCreateViewController.xib */; };
 		B31EA6431CE4911A00ACB506 /* DQQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31EA6411CE4911A00ACB506 /* DQQRCodeScanViewController.m */; };
 		B31EA6441CE4911A00ACB506 /* DQQRCodeScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31EA6421CE4911A00ACB506 /* DQQRCodeScanViewController.xib */; };
+		B345E43E1CE9E513005EF170 /* DQLookDailyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B345E43C1CE9E513005EF170 /* DQLookDailyViewController.m */; };
+		B345E43F1CE9E513005EF170 /* DQLookDailyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B345E43D1CE9E513005EF170 /* DQLookDailyViewController.xib */; };
+		B347097B1CEF9D390063B7DC /* DQRecordFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B34709791CEF9D390063B7DC /* DQRecordFontViewController.m */; };
+		B347097C1CEF9D390063B7DC /* DQRecordFontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B347097A1CEF9D390063B7DC /* DQRecordFontViewController.xib */; };
 		B349EF701CE343C1005236EC /* DQSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B349EF6E1CE343C1005236EC /* DQSearchViewController.m */; };
 		B349EF711CE343C1005236EC /* DQSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B349EF6F1CE343C1005236EC /* DQSearchViewController.xib */; };
 		B369E2D81CD75E6500B41355 /* DQRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B369E2D61CD75E6500B41355 /* DQRecordViewController.m */; };
@@ -50,6 +56,9 @@
 		371798B9E96C58D83B0A38AB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5C19BD3ABDF6AF3534B88C1E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A551913D65EB94424BE3FCB1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30776341CEFC33200203398 /* DQRecordBGColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQRecordBGColorViewController.h; sourceTree = "<group>"; };
+		B30776351CEFC33200203398 /* DQRecordBGColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQRecordBGColorViewController.m; sourceTree = "<group>"; };
+		B30776361CEFC33200203398 /* DQRecordBGColorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQRecordBGColorViewController.xib; sourceTree = "<group>"; };
 		B3081F4A1CE4AE5900F13C62 /* DQQRcodeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQQRcodeLayer.h; sourceTree = "<group>"; };
 		B3081F4B1CE4AE5900F13C62 /* DQQRcodeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQQRcodeLayer.m; sourceTree = "<group>"; };
 		B3081F4D1CE4E40C00F13C62 /* DQQRCodeCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQQRCodeCreateViewController.h; sourceTree = "<group>"; };
@@ -58,6 +67,12 @@
 		B31EA6401CE4911A00ACB506 /* DQQRCodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQQRCodeScanViewController.h; sourceTree = "<group>"; };
 		B31EA6411CE4911A00ACB506 /* DQQRCodeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQQRCodeScanViewController.m; sourceTree = "<group>"; };
 		B31EA6421CE4911A00ACB506 /* DQQRCodeScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQQRCodeScanViewController.xib; sourceTree = "<group>"; };
+		B345E43B1CE9E513005EF170 /* DQLookDailyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQLookDailyViewController.h; sourceTree = "<group>"; };
+		B345E43C1CE9E513005EF170 /* DQLookDailyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQLookDailyViewController.m; sourceTree = "<group>"; };
+		B345E43D1CE9E513005EF170 /* DQLookDailyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQLookDailyViewController.xib; sourceTree = "<group>"; };
+		B34709781CEF9D390063B7DC /* DQRecordFontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQRecordFontViewController.h; sourceTree = "<group>"; };
+		B34709791CEF9D390063B7DC /* DQRecordFontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQRecordFontViewController.m; sourceTree = "<group>"; };
+		B347097A1CEF9D390063B7DC /* DQRecordFontViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQRecordFontViewController.xib; sourceTree = "<group>"; };
 		B349EF6D1CE343C1005236EC /* DQSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQSearchViewController.h; sourceTree = "<group>"; };
 		B349EF6E1CE343C1005236EC /* DQSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQSearchViewController.m; sourceTree = "<group>"; };
 		B349EF6F1CE343C1005236EC /* DQSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQSearchViewController.xib; sourceTree = "<group>"; };
@@ -143,6 +158,9 @@
 		B31EA63E1CE4897D00ACB506 /* LookDaily */ = {
 			isa = PBXGroup;
 			children = (
+				B345E43B1CE9E513005EF170 /* DQLookDailyViewController.h */,
+				B345E43C1CE9E513005EF170 /* DQLookDailyViewController.m */,
+				B345E43D1CE9E513005EF170 /* DQLookDailyViewController.xib */,
 			);
 			path = LookDaily;
 			sourceTree = "<group>";
@@ -158,6 +176,19 @@
 				B3081F4F1CE4E40C00F13C62 /* DQQRCodeCreateViewController.xib */,
 			);
 			path = QRCode;
+			sourceTree = "<group>";
+		};
+		B34709771CEF9C2B0063B7DC /* set */ = {
+			isa = PBXGroup;
+			children = (
+				B34709781CEF9D390063B7DC /* DQRecordFontViewController.h */,
+				B34709791CEF9D390063B7DC /* DQRecordFontViewController.m */,
+				B347097A1CEF9D390063B7DC /* DQRecordFontViewController.xib */,
+				B30776341CEFC33200203398 /* DQRecordBGColorViewController.h */,
+				B30776351CEFC33200203398 /* DQRecordBGColorViewController.m */,
+				B30776361CEFC33200203398 /* DQRecordBGColorViewController.xib */,
+			);
+			path = set;
 			sourceTree = "<group>";
 		};
 		B369E2DF1CD76C4100B41355 /* selectView */ = {
@@ -307,6 +338,7 @@
 				B369F40C1CD6AD7C006997E4 /* DQMineViewController.h */,
 				B369F40D1CD6AD7C006997E4 /* DQMineViewController.m */,
 				B369F40E1CD6AD7C006997E4 /* DQMineViewController.xib */,
+				B34709771CEF9C2B0063B7DC /* set */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -442,16 +474,19 @@
 				B369E2D91CD75E6500B41355 /* DQRecordViewController.xib in Resources */,
 				B369F3DC1CD6AD7C006997E4 /* LaunchScreen.storyboard in Resources */,
 				B369F4001CD6AD7C006997E4 /* DQMainViewController.xib in Resources */,
+				B30776381CEFC33200203398 /* DQRecordBGColorViewController.xib in Resources */,
 				B369F40B1CD6AD7C006997E4 /* DQToolViewController.xib in Resources */,
 				B349EF711CE343C1005236EC /* DQSearchViewController.xib in Resources */,
 				B3081F511CE4E40C00F13C62 /* DQQRCodeCreateViewController.xib in Resources */,
 				B369F3F61CD6AD7C006997E4 /* Image.bundle in Resources */,
 				B31EA6441CE4911A00ACB506 /* DQQRCodeScanViewController.xib in Resources */,
+				B345E43F1CE9E513005EF170 /* DQLookDailyViewController.xib in Resources */,
 				B3DC59831CD7BB02001EE2D0 /* DQAddView.xib in Resources */,
 				B369F4061CD6AD7C006997E4 /* DQStudyViewController.xib in Resources */,
 				B369F3D91CD6AD7C006997E4 /* Assets.xcassets in Resources */,
 				B369E2E41CD76C6700B41355 /* DQSelectView.xib in Resources */,
 				B369F3D71CD6AD7C006997E4 /* Main.storyboard in Resources */,
+				B347097C1CEF9D390063B7DC /* DQRecordFontViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,9 +558,12 @@
 				B31EA6431CE4911A00ACB506 /* DQQRCodeScanViewController.m in Sources */,
 				B369E2D81CD75E6500B41355 /* DQRecordViewController.m in Sources */,
 				B3DC59771CD7AB3B001EE2D0 /* DQListDao.m in Sources */,
+				B30776371CEFC33200203398 /* DQRecordBGColorViewController.m in Sources */,
 				B369F3FF1CD6AD7C006997E4 /* DQMainViewController.m in Sources */,
 				B369F4051CD6AD7C006997E4 /* DQStudyViewController.m in Sources */,
 				B3DC59741CD7AB2A001EE2D0 /* DQListModel.m in Sources */,
+				B347097B1CEF9D390063B7DC /* DQRecordFontViewController.m in Sources */,
+				B345E43E1CE9E513005EF170 /* DQLookDailyViewController.m in Sources */,
 				B369E2E71CD76E6500B41355 /* NSArray+DQHelper.m in Sources */,
 				B369F3CE1CD6AD7C006997E4 /* main.m in Sources */,
 				B3081F501CE4E40C00F13C62 /* DQQRCodeCreateViewController.m in Sources */,
