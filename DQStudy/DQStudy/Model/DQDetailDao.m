@@ -14,7 +14,7 @@
 +(BOOL)save:(DQDetailModel * )model{
     FMDatabase * db = [DQFMDBHelper database];
     if ([db open]) {
-        BOOL isSuccese = [db executeUpdate:@"insert into detail(id, title, name, detail, image) values(?, ?, ?, ?, ?)", model.myID, model.title, model.name, model.detail, model.image];
+        BOOL isSuccese = [db executeUpdate:@"insert into detail(title, name, detail, image) values(?, ?, ?, ?, ?)", model.title, model.name, model.detail, model.image];
         [db close];
         return isSuccese;
     }
@@ -23,7 +23,7 @@
 +(BOOL)deleteAtModel:(DQDetailModel*)model{
     FMDatabase * db = [DQFMDBHelper database];
     if ([db open]) {
-        BOOL isSuccese = [db executeUpdate:@"delete from detail where id=?",model.myID];
+        BOOL isSuccese = [db executeUpdate:@"delete from detail where id=?",[NSString stringWithFormat:@"%ld",model.myID]];
         [db close];
         return isSuccese;
     }
@@ -32,7 +32,7 @@
 +(BOOL)updateAtModel:(DQDetailModel*)model{
     FMDatabase * db = [DQFMDBHelper database];
     if ([db open]) {
-        BOOL isSuccese = [db executeUpdate:@"update detail set name=?, detail=?, image=? where id=?",model.name, model.detail, model.image, model.myID];
+        BOOL isSuccese = [db executeUpdate:@"update detail set detail=?, image=? where id=?", model.detail, model.image, [NSString stringWithFormat:@"%ld",model.myID]];
         [db close];
         return isSuccese;
     }

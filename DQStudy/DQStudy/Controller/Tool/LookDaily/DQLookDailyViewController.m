@@ -54,13 +54,16 @@
 #pragma mark -
 #pragma mark configUI
 -(void)configUI{
+    //字体faxiao
+    NSArray * colorArray = [USER_DEFAULTS objectForKey:RECORD_BGCOLOR];
+    self.showView.backgroundColor = [UIColor colorWithRed:[colorArray[0] floatValue]/255.0 green:[colorArray[1] floatValue]/255.0 blue:[colorArray[2] floatValue]/255.0 alpha:1.0];
+    CGFloat fontSize = [[USER_DEFAULTS objectForKey:RECORD_FONTSIZE] floatValue];
     //string设置
-    NSDictionary * dic = @{NSFontAttributeName:[UIFont systemFontOfSize:20],NSForegroundColorAttributeName:[UIColor orangeColor]};
+    NSDictionary * dic = @{NSFontAttributeName:[UIFont systemFontOfSize:fontSize],NSForegroundColorAttributeName:[UIColor orangeColor]};
     NSAttributedString * attributeStr = [[NSAttributedString alloc] initWithString:self.model.detail attributes:dic];
     self.showView.textAlignment = NSTextAlignmentLeft;
     self.showView.attributedText = attributeStr;
     
-    self.showView.backgroundColor = [UIColor colorWithRed:138.0/255.0 green:109.0/255.0 blue:53.0/255.0 alpha:1.0];
 }
 
 #pragma mark -
