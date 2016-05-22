@@ -14,7 +14,7 @@
 +(BOOL)save:(DQDetailModel * )model{
     FMDatabase * db = [DQFMDBHelper database];
     if ([db open]) {
-        BOOL isSuccese = [db executeUpdate:@"insert into detail(title, name, detail, image) values(?, ?, ?, ?, ?)", model.title, model.name, model.detail, model.image];
+        BOOL isSuccese = [db executeUpdate:@"insert into detail(title, name, detail, image) values(?, ?, ?, ?)", model.title, model.name, model.detail, model.image];
         [db close];
         return isSuccese;
     }

@@ -20,6 +20,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <gestureRecognizers/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <connections>
@@ -35,7 +36,7 @@
                 <constraint firstItem="iSV-54-4ku" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="t9r-Bf-428"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="236.5" y="321"/>
+            <point key="canvasLocation" x="130.5" y="301"/>
         </view>
         <tapGestureRecognizer id="WTs-Va-yE5">
             <connections>

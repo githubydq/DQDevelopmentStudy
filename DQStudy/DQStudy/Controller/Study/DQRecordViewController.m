@@ -10,6 +10,8 @@
 #import "DQDetailModel.h"
 #import "DQDetailDao.h"
 
+#import <MBProgressHUD.h>
+
 //138,109,53 牛皮纸色
 
 //199,237,204 护眼se
@@ -53,10 +55,23 @@
 }
 
 -(void)recordRightClick{
+    MBProgressHUD * hub = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hub.mode = MBProgressHUDModeText;
     if (![self.textView.text isEqualToString:self.model.detail]) {
         self.model.detail = self.textView.text;
-        [DQDetailDao updateAtModel:self.model];
+        if ([DQDetailDao updateAtModel:self.model]) {
+            hub.labelText = @"保存成功";
+        }else{
+            hub.labelText = @"保存失败";
+        }
+        
+    }else{
+        hub.labelText = @"没有修改";
     }
+    [hub show:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [hub hide:YES];
+    });
 }
 
 /**
